@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   path.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adam <adam@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: amedenec <amedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 22:20:08 by adam              #+#    #+#             */
-/*   Updated: 2025/03/01 01:31:28 by adam             ###   ########.fr       */
+/*   Updated: 2025/03/02 01:09:07 by amedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	get_path(t_data *pipex)
 	int		i;
 	char	**envp;
 
-	envp = pipex->env; 
+	envp = pipex->env;
 	i = 0;
 	while (envp[i])
 	{
@@ -25,6 +25,11 @@ void	get_path(t_data *pipex)
 		{
 			ft_strlcpy(pipex->path, envp[i], MAX_PATH);
 			pipex->full_path = ft_split(pipex->path, ':');
+			if (!pipex->full_path)
+			{
+				clear_memory(pipex);
+				exit(0);
+			}
 			return ;
 		}
 		i++;

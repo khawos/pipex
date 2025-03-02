@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adam <adam@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: amedenec <amedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 22:20:14 by adam              #+#    #+#             */
-/*   Updated: 2025/03/01 04:14:50 by adam             ###   ########.fr       */
+/*   Updated: 2025/03/02 02:39:30 by amedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ typedef struct s_data
 	char	fd_infile[MAX_NAME];
 	char	fd_outfile[MAX_NAME];
 	int		pipe_fd[2];
-	char	path[MAX_PATH]; // ligne avec PATH=home/amedenec
+	char	path[MAX_PATH];
 }	t_data;
 
 // init
@@ -47,7 +47,8 @@ void	init(t_data *pipex, char **argv, char **envp);
 void	clear_memory(t_data *pipex);
 void	free_split(char **str);
 void	double_free(char *str1, char *str2);
-void	close_2_fd(int a, int b);
+void	close_3_fd(int a, int b, int c);
+void	call_free_memory_and_exit(t_data *pipex);
 
 // path
 void	get_path(t_data *pipex);

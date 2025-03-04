@@ -6,7 +6,7 @@
 /*   By: amedenec <amedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 22:20:14 by adam              #+#    #+#             */
-/*   Updated: 2025/03/02 02:39:30 by amedenec         ###   ########.fr       */
+/*   Updated: 2025/03/04 12:20:36 by amedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,9 @@ void	free_split(char **str);
 void	double_free(char *str1, char *str2);
 void	close_3_fd(int a, int b, int c);
 void	call_free_memory_and_exit(t_data *pipex);
+
+// utils2
+void	close_2_fd(int a, int b);
 
 // path
 void	get_path(t_data *pipex);

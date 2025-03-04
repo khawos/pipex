@@ -6,7 +6,7 @@
 /*   By: amedenec <amedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 22:20:08 by adam              #+#    #+#             */
-/*   Updated: 2025/03/02 01:09:07 by amedenec         ###   ########.fr       */
+/*   Updated: 2025/03/04 12:21:29 by amedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	get_path(t_data *pipex)
 		}
 		i++;
 	}
+	close_2_fd(pipex->pipe_fd[0], pipex->pipe_fd[1]);
 	write(2, ERROR_PATH, sizeof(ERROR_PATH));
 	clear_memory(pipex);
 	exit(0);

@@ -6,7 +6,7 @@
 #    By: amedenec <amedenec@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/28 22:20:19 by adam              #+#    #+#              #
-#    Updated: 2025/03/02 01:25:29 by amedenec         ###   ########.fr        #
+#    Updated: 2025/03/04 12:22:54 by amedenec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CFLAGS = -Wall -Wextra -Werror -g3 -I.
 
 SRC_DIR = ./src
 OBJ_DIR = ./obj
-SRC = check_error.c exec.c init.c main.c path.c utils.c
+SRC = check_error.c exec.c init.c main.c path.c utils.c utils2.c
 OBJS = $(patsubst %.c, $(OBJ_DIR)/%.o, $(SRC))
 
 LIBFT_DIR = ./libft

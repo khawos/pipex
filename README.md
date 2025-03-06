@@ -26,7 +26,8 @@ Explication :
 
 ## Fonctionnement
 
-- `pipe()` pour créer un tube entre deux processus
+- Utilisation des appels systemes :
+   - `pipe()` pour créer un tube entre deux processus
    - `fork()` : pour dupliquer les processus courant
    - `dup2()` : pour rediriger les entrées et sorties standards
    - `execve` pour exécuter les commandes
